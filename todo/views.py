@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import Http404
 from todo.models import Todo
+from config.fake_db import user_db
+
+_db = user_db
 
 def todo_list(request):
     todo_list = Todo.objects.all().values_list('id','title')
