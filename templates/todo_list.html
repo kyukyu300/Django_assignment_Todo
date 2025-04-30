@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,14 +44,13 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>User List</h1>
+    <div class="container">
+        <h1>Todo List</h1>
         <ul>
-            {% for user in names %}
-                <li><a href="{% url 'user_info' user.id %}">{{ user.name }}</a></li>
+            {% for todo in data %}
+                <li><a href="{% url 'todo_info' todo.id %}">{{ todo.title }}</a></li>
             {% endfor %}
         </ul>
-</div>
-
+    </div>
 </body>
 </html>

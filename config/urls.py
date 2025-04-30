@@ -16,26 +16,18 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.http import Http404
-from django.shortcuts import render
 from django.urls import path
-from config.fake_db import user_db
 
-_db = user_db
+from django.contrib import admin
+from django.urls import path
 
-def user_list(request):
-    names = [{'id': key, 'name': value['이름']} for key, value in _db.items()]
-    return render(request, 'user_list.html', {'names': names})
-
-def user_info(request, user_id):
-    if user_id > len(_db):
-        raise Http404('유저를 찾을 수 없습니다.')
-    info = _db[user_id]
-    return render(request, 'user_info.html', {'info': info})
-
+from todo.views import todo_list, todo_info, user_info, user_list
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("user/", user_list, name="user_list"),
-    path("user/<int:user_id>/", user_info, name="user_info"),
+    path('admin/', admin.site.urls),
+    path("users/", user_list, name="user_list"),
+    path("users/<int:user_id>/", user_info, name="user_info"),
+
+    path('todo/', todo_list, name='todo_list'),  # 추가
+    path('todo/<int:todo_id>/', todo_info, name='todo_info'),  # 추가
 ]

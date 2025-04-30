@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,11 +38,11 @@
     </style>
 </head>
 <body>
-<div class="container">
-     <h1>{{ info.이름 }}'s Information</h1>
+    <div class="container">
+        <h1>{{ data.title }}</h1>
         <table>
-            {% for key, value in info.items %}
-                {% if key != '이름' %}
+            {% for key, value in data.items %}
+                {% if key != 'title' %}
                     <tr>
                         <th>{{ key }}</th>
                         <td>{{ value }}</td>
@@ -49,6 +50,6 @@
                 {% endif %}
             {% endfor %}
         </table>
-</div>
+    </div>
 </body>
 </html>
