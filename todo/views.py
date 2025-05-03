@@ -1,5 +1,12 @@
-from django.shortcuts import render
+
+from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
+from django.db.models import Q
 from django.http import Http404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
+
+from todo.forms import TodoForm, TodoUpdateForm #Form 파일 생성 잊지 말기~
 from todo.models import Todo
 from config.fake_db import user_db
 
@@ -35,3 +42,38 @@ def user_info(request, user_id):
         raise Http404('유저를 찾을 수 없습니다.')
     info = _db[user_id]
     return render(request, 'user_info.html', {'info': info})
+
+@login_required()
+def todo_create(request):
+    form = TodoForm(request.POST or None)
+    if form.is_valid():
+		     # form으로부터 넘겨받은 데이터를 바탕으로 Todo 객체를 저장
+		     # 데이터베이스에 저장하기전 user 정보를 추가하기위해 commit=False 를 사용
+        todo = form.save(commit=False)
+        todo.user = request.user # Todo 객체에 user정보를 추가
+        todo.save() # user정보가 추가된 Todo 객체를 데이터베이스에 저장
+    return redirect(reverse('todo_info', kwargs={'todo_id': todo.pk}))
+    context = {
+        'form': form
+    }
+    return render(request, 'todo_create.html', context)
+
+
+@login_required()
+def todo_update(request, todo_id):
+    todo = get_object_or_404(Todo, id=todo_id, user=request.user)
+    form = TodoUpdateForm(request.POST or None, instance=todo)
+    if form.is_valid():
+        form.save()
+        return redirect(reverse('todo_info', kwargs={'todo_id': todo.pk}))
+    context = {
+        'form': form
+    }
+    return render(request, 'todo_update.html', context)
+
+
+@login_required()
+def todo_delete(request, todo_id):
+    todo = get_object_or_404(Todo, id=todo_id, user=request.user)
+    todo.delete()
+    return redirect(reverse('todo_list'))
