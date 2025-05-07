@@ -27,10 +27,11 @@ urlpatterns = [
     path("users/", user_list, name="user_list"),
     path("users/<int:user_id>/", user_info, name="user_info"),
 
-    path('todo/', todo_list, name='todo_list'),  # 추가
+    path('todo/', todo_list, name='todo_list'),
     path('todo/<int:todo_id>/', todo_info, name='todo_info'),
     path('todo/<int:todo_id>/update/', todo_update, name='todo_update'),
     path('todo/<int:todo_id>/delete/', todo_delete, name='todo_delete'),
+    path('', include('todo.urls')),
     # 추가
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/login/', user_views.login, name='login'),

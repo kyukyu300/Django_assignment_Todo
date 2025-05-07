@@ -16,7 +16,7 @@ def todo_list(request):
     todo_list = Todo.objects.all().values_list('id','title')
     result = [{'id': todo[0], 'title': todo[1]} for i, todo in enumerate(todo_list)]
 
-    return render(request, 'todo_list.html', {'data': result})
+    return render(request, 'todo/todo_list.html', {'data': result})
 
 
 def todo_info(request, todo_id):
@@ -29,7 +29,7 @@ def todo_info(request, todo_id):
             'end_date': todo.end_date,
             'is_completed': todo.is_completed,
         }
-        return render(request, 'todo_info.html', {'data': info})
+        return render(request, 'todo/todo_info.html', {'data': info})
     except Todo.DoesNotExist:
         raise Http404("Todo does not exist")
 
@@ -56,7 +56,7 @@ def todo_create(request):
     context = {
         'form': form
     }
-    return render(request, 'todo_create.html', context)
+    return render(request, 'todo/todo_create.html', context)
 
 
 @login_required()
@@ -69,7 +69,7 @@ def todo_update(request, todo_id):
     context = {
         'form': form
     }
-    return render(request, 'todo_update.html', context)
+    return render(request, 'todo/todo_update.html', context)
 
 
 @login_required()
