@@ -7,16 +7,14 @@
     <list default="true" id="1825401e-2b68-4c85-84c5-23ee90727430" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/todo/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/todo/todo_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/todo/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/cb_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/cb_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -71,7 +69,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;chapter__05&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chapter__06&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/kimkyujin/Desktop/Django_assignment&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -84,8 +82,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/todo" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/templates/todo" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
@@ -153,6 +151,8 @@
       <workItem from="1746177865288" duration="1272000" />
       <workItem from="1746291840615" duration="261000" />
       <workItem from="1746294796625" duration="3246000" />
+      <workItem from="1746610110044" duration="83000" />
+      <workItem from="1746643631218" duration="1406000" />
     </task>
     <servers />
   </component>
