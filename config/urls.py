@@ -21,7 +21,8 @@ from django.contrib import admin
 from django.urls import path, include
 from todo.views import todo_list, todo_info, user_info, user_list, todo_create, todo_delete, todo_update
 from users import views as user_views
-
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("users/", user_list, name="user_list"),
@@ -37,3 +38,5 @@ urlpatterns = [
     path('accounts/login/', user_views.login, name='login'),
     path('accounts/signup/', user_views.sign_up, name='signup'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

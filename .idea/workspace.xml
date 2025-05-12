@@ -7,10 +7,15 @@
     <list default="true" id="1825401e-2b68-4c85-84c5-23ee90727430" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/todo/todo_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_create.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/todo/todo_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/todo/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/todo/todo_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/cb_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/cb_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models.py" afterDir="false" />
@@ -69,7 +74,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;chapter__06&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chapter__07&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/kimkyujin/Desktop/Django_assignment&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -83,6 +88,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/todo/media" />
       <recent name="$PROJECT_DIR$/templates/todo" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
@@ -153,6 +159,11 @@
       <workItem from="1746294796625" duration="3246000" />
       <workItem from="1746610110044" duration="83000" />
       <workItem from="1746643631218" duration="1406000" />
+      <workItem from="1746697215156" duration="153000" />
+      <workItem from="1746719018473" duration="510000" />
+      <workItem from="1746719531777" duration="773000" />
+      <workItem from="1746720918896" duration="4996000" />
+      <workItem from="1746880762828" duration="27000" />
     </task>
     <servers />
   </component>
