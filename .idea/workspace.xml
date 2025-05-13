@@ -9,17 +9,20 @@
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo/todo_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/todo/completed_images/KakaoTalk_Photo_2025-04-11-14-13-35_005.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/todo/thumbnails/KakaoTalk_Photo_2025-04-11-14-13-35_005_thumbnail.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/todo/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/todo/todo_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo/todo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo/todo_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo/todo_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/cb_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/cb_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/migrations/0002_todo_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/migrations/0003_comment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/migrations/0004_todo_completed_image_todo_thumbnail_alter_todo_user.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;chapter__07&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chapter__08&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/kimkyujin/Desktop/Django_assignment&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -164,6 +167,9 @@
       <workItem from="1746719531777" duration="773000" />
       <workItem from="1746720918896" duration="4996000" />
       <workItem from="1746880762828" duration="27000" />
+      <workItem from="1747040700522" duration="2028000" />
+      <workItem from="1747098368139" duration="565000" />
+      <workItem from="1747151601596" duration="3118000" />
     </task>
     <servers />
   </component>

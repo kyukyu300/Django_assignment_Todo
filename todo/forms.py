@@ -1,3 +1,4 @@
+from django.forms import ClearableFileInput
 from django_summernote.widgets import SummernoteWidget
 from django import forms
 from todo.models import Todo
@@ -5,14 +6,19 @@ from .models import Comment
 
 
 class TodoForm(forms.ModelForm):
+    thumbnail = forms.ImageField(
+        required=False,
+        widget=ClearableFileInput(attrs={'class': 'form-control'})
+    )
+
     class Meta:
         model = Todo
-        fields = ['title', 'description', 'start_date', 'end_date']
+        fields = ['title', 'description', 'start_date', 'end_date', 'thumbnail']
         widgets = {
             'description': SummernoteWidget(),
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': '제목을 입력해주세요.'}),
             'start_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
-            'end_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'})
+            'end_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
         }
 
 

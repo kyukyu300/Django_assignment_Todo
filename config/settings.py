@@ -10,10 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import json
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+with open(BASE_DIR / '.config_secret' / 'secret.json') as f:
+    config_secret_str = f.read()
+
+SECRET = json.loads(config_secret_str)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -23,7 +29,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-9$wxb%m0ozhm8wr@p0!am%0aawe@f)+=5fqbz6xcjdh$(kqooq"
+SECRET_KEY = SECRET['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -135,6 +141,18 @@ STATIC_ROOT = BASE_DIR / '.static_root'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# auth
+AUTH_USER_MODEL = 'users.User'
+
+# email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.naver.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = SECRET['EMAIL']['USER']
+EMAIL_HOST_PASSWORD = SECRET['EMAIL']['PASSWORD']
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # login / logout
 LOGIN_URL = '/accounts/login/'

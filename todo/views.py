@@ -45,14 +45,15 @@ def user_info(request, user_id):
 
 @login_required()
 def todo_create(request):
-    form = TodoForm(request.POST or None)
+    form = TodoForm(request.POST, request.FILES)
     if form.is_valid():
-		     # form으로부터 넘겨받은 데이터를 바탕으로 Todo 객체를 저장
-		     # 데이터베이스에 저장하기전 user 정보를 추가하기위해 commit=False 를 사용
         todo = form.save(commit=False)
-        todo.user = request.user # Todo 객체에 user정보를 추가
-        todo.save() # user정보가 추가된 Todo 객체를 데이터베이스에 저장
-    return redirect(reverse('todo_info', kwargs={'todo_id': todo.pk}))
+        todo.user = request.user
+        todo.save()
+        return redirect(reverse('todo_info', kwargs={'todo_id': todo.pk}))
+    else:
+        form = TodoForm()
+
     context = {
         'form': form
     }

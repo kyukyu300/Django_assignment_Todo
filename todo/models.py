@@ -1,3 +1,6 @@
+import re
+
+from django.core.files.storage import default_storage
 from django.db import models
 
 # Create your models here.
@@ -21,11 +24,22 @@ class Todo(models.Model):
     end_date = models.DateField()
     is_completed = models.BooleanField(default=False)
     thumbnail = models.ImageField(
-        upload_to='todo/thumbnails', default='todo/no_image/NO-IMAGE.gif', null=True, blank=True
+        upload_to='thumbnails/', null=True, blank=True
     )
-    completed_image = models.ImageField(upload_to='todo/completed_images', null=True, blank=True)
+    completed_image = models.ImageField(upload_to='completed_images/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    @property
+    def get_preview_image_url(self):
+        if self.thumbnail and self.thumbnail.name:
+            return self.thumbnail.url
+        if self.completed_image and self.completed_image.name:
+            return self.completed_image.url
+        match = re.search(r'<img[^>]+src=[\'"](?P<src>[^\'"]+)[\'"]', self.description or "", re.IGNORECASE)
+        if match:
+            return match.group("src")
+        return None
 
     def __str__(self):
         return self.title
